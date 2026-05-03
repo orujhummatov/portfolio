@@ -1,7 +1,7 @@
 // src/data.js
 
 export const heroData = {
-  "name": "Oruj Hummat",
+  "name": "Oruj Hummatov",
   "roles": [
     "Project Manager",
     "Startup Founder",
