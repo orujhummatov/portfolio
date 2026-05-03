@@ -10,11 +10,19 @@ import Competitions from './components/Competitions'
 import Timeline from './components/Timeline'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Admin from './Admin'
 
 export default function App() {
+  const [isAdmin, setIsAdmin] = useState(window.location.hash === '#admin')
   const [loading, setLoading] = useState(true)
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
+
+  useEffect(() => {
+    const handleHash = () => setIsAdmin(window.location.hash === '#admin')
+    window.addEventListener('hashchange', handleHash)
+    return () => window.removeEventListener('hashchange', handleHash)
+  }, [])
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2800)
@@ -39,6 +47,8 @@ export default function App() {
     })
     return () => observer.disconnect()
   }, [loading])
+
+  if (isAdmin) return <Admin />
 
   return (
     <>
