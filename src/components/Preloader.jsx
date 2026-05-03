@@ -13,7 +13,7 @@ export default function Preloader() {
           <motion.span key={i}
             initial={{ opacity:0, y:40 }}
             animate={{ opacity:1, y:0 }}
-            transition={{ delay: i*0.07, duration:0.5 }}
+            transition={{ delay: i*0.07, duration: 0.5 }}
             style={{ fontSize:'clamp(2rem,6vw,4rem)',fontWeight:900,background:'linear-gradient(135deg,#00d4ff,#8b5cf6)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',display:'inline-block',minWidth:l===' '?'1rem':'auto' }}
           >{l}</motion.span>
         ))}

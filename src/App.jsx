@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import Preloader from './components/Preloader'
 import Cursor from './components/Cursor'
 import Navbar from './components/Navbar'
@@ -27,6 +28,7 @@ export default function App() {
   }, [])
 
   useEffect(() => {
+    if (loading) return
     const sections = ['hero','about','projects','competitions','experience','contact']
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) setActiveSection(e.target.id) })
@@ -38,21 +40,26 @@ export default function App() {
     return () => observer.disconnect()
   }, [loading])
 
-  if (loading) return <Preloader />
-
   return (
     <>
-      <Cursor />
-      <Navbar scrolled={scrolled} activeSection={activeSection} />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Competitions />
-        <Timeline />
-        <Contact />
-      </main>
-      <Footer />
+      <AnimatePresence>
+        {loading && <Preloader key="preloader" />}
+      </AnimatePresence>
+      {!loading && (
+        <>
+          <Cursor />
+          <Navbar scrolled={scrolled} activeSection={activeSection} />
+          <main>
+            <Hero />
+            <About />
+            <Projects />
+            <Competitions />
+            <Timeline />
+            <Contact />
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   )
 }
