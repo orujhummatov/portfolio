@@ -1,12 +1,6 @@
 import { motion } from 'framer-motion'
-const items = [
-  { comp:'IsDB Innovation Pitch 2026', project:'NUSH', status:'Completed', color:'#00ff9d' },
-  { comp:'KOBİA Grant (~18,655 AZN)', project:'NUSH', status:'Completed', color:'#00ff9d' },
-  { comp:'TEKNOFEST 2026 Biotechnology', project:'EkoEthanol', status:'Positive Progress', color:'#00d4ff' },
-  { comp:'İZİA Investment Plan', project:'EkoEthanol', status:'Prepared', color:'#00ff9d' },
-  { comp:'StartupSchool.az Season 4', project:'NUSH + EkoEthanol', status:'Applied', color:'#00ff9d' },
-  { comp:'QS Reimagine Education Awards 2026', project:'StarTap', status:'Strongest Candidate', color:'#f59e0b' },
-]
+import { competitionsData } from '../data'
+const items = competitionsData
 export default function Competitions() {
   return (
     <section id="competitions" style={{ padding:'100px 2rem' }}>

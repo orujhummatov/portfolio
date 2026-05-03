@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion'
-const projects = [
-  { icon:'🗺️', title:'gAIde', desc:'AI-driven city exploration mobile app. Discovers landmarks within 1km radius with a sleek dark theme and mint-green palette.', tags:['AI','Mobile','React Native'] },
-  { icon:'🍽️', title:'NUSH', desc:"Azerbaijan's first certified home chefs marketplace. Applied to IsDB Pitch 2026 and KOBİA grant.", tags:['Marketplace','FoodTech','Startup'] },
-  { icon:'🌱', title:'EkoEthanol', desc:'Zero-waste bio-refinery converting bread waste and sheep wool into ethanol, biogenic CO2, and agro-composite fertilizer.', tags:['BioTech','Sustainability','TEKNOFEST'] },
-  { icon:'📅', title:'Schedify', desc:'AI-driven university scheduling SaaS for Azerbaijan and Central Asia.', tags:['SaaS','AI','EdTech'] },
-  { icon:'🛠️', title:'AppForge', desc:'No-code mobile app builder. Pivoted from React Native to React+Vite web version.', tags:['No-Code','React','Vite'] },
-  { icon:'🐾', title:'PETTY', desc:'Transparent animal welfare and donation platform for Azerbaijan with cashbox transparency and adoption service.', tags:['Social Impact','Transparency','Azerbaijan'] },
-  { icon:'🏛️', title:'BEU Technopark Platform', desc:'Commercial services platform with 4 pillars and Bronze/Silver/Gold membership tiers.', tags:['B2B','Platform','Technopark'] },
-]
+import { projectsData } from '../data'
+const projects = projectsData
 export default function Projects() {
   return (
     <section id="projects" style={{ padding:'100px 2rem' }}>
