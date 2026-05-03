@@ -1,12 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
+import { timelineData } from '../data'
 
-const ITEMS = [
-  { date: '2024 — Present', title: 'Innovation & Startup PM', org: 'BEU Technopark', desc: 'Leading commercial platform development (ddp.beu.edu.az), Founder Institute & Plug and Play partnerships.', current: true },
-  { date: '2024 — Present', title: 'Founder & Lead', org: 'StarTap Program', desc: '14 mentor tracks, weekly English sessions, monthly expert events. Targeting QS Reimagine Education Awards 2026.', current: true },
-  { date: '2023 — Present', title: 'MSc Cyber Security', org: 'Baku Engineering University', desc: 'Dissertation: Quantum-based information protection in optical communication systems. QKD, PLOB bounds, hybrid QKD-PQC.', current: true },
-  { date: '2019 — 2023', title: 'B.Sc. Information Technologies', org: 'BEU', desc: 'Erasmus+ international exchange program participant.', current: false },
-  { date: '2022 — 2023', title: 'Engineer', org: 'Global Protech', desc: 'Software engineering and product development experience.', current: false },
-]
+const ITEMS = timelineData
 
 export default function Timeline() {
   const ref = useRef(null)

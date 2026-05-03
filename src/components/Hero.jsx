@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-const roles = ['Product Manager','Startup Founder','Cybersecurity Researcher','Community Builder']
-const nameLetters = 'Oruj Hummatov'.split('')
+import { heroData } from '../data'
+const nameLetters = heroData.name.split('')
+const roles = heroData.roles
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0)
   const [displayed, setDisplayed] = useState('')
@@ -43,7 +44,7 @@ export default function Hero() {
           style={{ display:'inline-block',width:2,height:'1.4em',background:'#00d4ff',verticalAlign:'middle' }} />
       </motion.div>
       <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{delay:1.2,duration:0.6}}
-        style={{ color:'rgba(255,255,255,0.5)',marginBottom:'2.5rem',fontSize:'0.95rem' }}>📍 Baku, Azerbaijan</motion.p>
+        style={{ color:'rgba(255,255,255,0.5)',marginBottom:'2.5rem',fontSize:'0.95rem' }}>{heroData.location}</motion.p>
       <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{delay:1.4,duration:0.6}}
         style={{ display:'flex',gap:'1rem',flexWrap:'wrap',justifyContent:'center' }}>
         <motion.a href="#projects" whileHover={{scale:1.05,boxShadow:'0 0 30px rgba(0,212,255,0.4)'}} whileTap={{scale:0.97}}
