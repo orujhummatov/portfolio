@@ -6,7 +6,7 @@ export const heroData = {
     "Project Manager",
     "Startup Founder",
     "MSc in Cybersecurity",
-    "Community Builder"
+    "Community Builder - StarTap Community"
   ],
   "location": "📍 Baku, Azerbaijan"
 }
