@@ -3,9 +3,9 @@
 export const heroData = {
   "name": "Oruj Hummatov",
   "roles": [
-    "Project Manager",
+    "Product Manager",
     "Startup Founder",
-    "Cybersecurity Researcher",
+    "Cybersecurity MSc",
     "Community Builder"
   ],
   "location": "📍 Baku, Azerbaijan"
