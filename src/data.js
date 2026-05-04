@@ -3,7 +3,7 @@
 export const heroData = {
   "name": "Oruj Hummatov",
   "roles": [
-    "Product Manager",
+    "Project Manager",
     "Startup Founder",
     "Cybersecurity MSc",
     "Community Builder"
